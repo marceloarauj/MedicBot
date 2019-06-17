@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.grey,
+        primarySwatch: Colors.blueGrey,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -85,6 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         borderRadius: BorderRadius.circular(30.0)),
                   ),
                 )),
+               
             Padding(
               padding: EdgeInsets.only(top: 60),
               child: SizedBox(
@@ -92,12 +93,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: RaisedButton(
                   onPressed: () async {
                     Usuario user = new Usuario(login.text,password.text);
-                      await user.loginUsuario();
+                      //await user.loginUsuario();
                       
-                      if(user.resposta == true){
+                      //if(user.resposta == false){
                         Navigator.push(context,
                           CupertinoPageRoute(builder: (context) => telamenu()));  
-                      }
+                      //}
                   },
                   child: Text('OK'),
                   shape: RoundedRectangleBorder(
