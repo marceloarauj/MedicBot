@@ -23,10 +23,7 @@ class _TelaDeMensagens extends State<TelaMensagens> {
 
   @override
   Widget build(BuildContext context) {
-    List<String> androidVenNames = new List<String>();
-    for (int i = 0; i < 30; i++) {
-      androidVenNames.add("VALOR Nº $i");
-    }
+    
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
@@ -36,7 +33,7 @@ class _TelaDeMensagens extends State<TelaMensagens> {
           padding: EdgeInsets.only(left: 6,right: 4,bottom: 8),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
-            children: <Widget>[
+            children: <Widget>[enviaMsg(),recebeMesg(),
               //envio de mensagem
               Container(
                   child: Row(children: <Widget>[
@@ -55,7 +52,30 @@ class _TelaDeMensagens extends State<TelaMensagens> {
           ),
         ));
   }
+
+  Widget recebeMesg(){
+
+    return Container(
+      padding: EdgeInsets.all(10),
+      margin: EdgeInsets.only(bottom: 12),
+      width: 270,
+      decoration: BoxDecoration(color:Color.fromRGBO(0, 0, 255, 0.3),borderRadius: BorderRadius.circular(30.0)),
+      child: Text("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"),
+    );
+  }
+  
+  Widget enviaMsg(){
+
+    return Container(
+      padding: EdgeInsets.all(10),
+      margin: EdgeInsets.only(bottom: 12),
+      width: 270,
+      decoration: BoxDecoration(color:Color.fromRGBO(120, 120, 120, 0.5),borderRadius: BorderRadius.circular(30.0)),
+      child: Text("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"),
+    );
+  }
 }
+
 /*
  ListView.builder(
               itemBuilder: (context, pos) {

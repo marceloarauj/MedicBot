@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Image(
-              image: AssetImage('assets/robot.png'),
+              image: AssetImage('assets/tiradentes.png'),
               width: 140,
               height: 140,
             ),
